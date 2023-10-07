@@ -1,25 +1,30 @@
 import {Anchor} from "antd";
+import { DribbbleSquareOutlined,
+    UserOutlined ,
+    HomeOutlined
+} from "@ant-design/icons"
 
+import styled from "styled-components"
+const StyledHomeOutlined = styled(HomeOutlined)`
+ padding : 2px;
+ font-size:50px;
+`;
+const StyledAnchor = styled(Anchor)`
+  display: block;
+  width: 100%;
+  background-color: burlywood;
+`
 const Header : React.FC = () =>{
-    return <div style={{ padding: '20px' }}>
-        <Anchor
+    return <div>
+        <StyledAnchor
             direction="horizontal"
             items={[
                 {
                     key: 'part-1',
                     href: '#part-1',
-                    title: 'Part 1',
+                    title: <StyledHomeOutlined />,
                 },
-                {
-                    key: 'part-2',
-                    href: '#part-2',
-                    title: 'Part 2',
-                },
-                {
-                    key: 'part-3',
-                    href: '#part-3',
-                    title: 'Part 3',
-                },
+                
             ]} />
     </div>;
 }
