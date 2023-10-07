@@ -5,9 +5,10 @@ import { DribbbleSquareOutlined,
 } from "@ant-design/icons"
 
 import styled from "styled-components"
+
 const StyledHomeOutlined = styled(HomeOutlined)`
  padding : 2px;
- font-size:50px;
+ font-size: 50px;
 `;
 const StyledAnchor = styled(Anchor)`
   display: block;
