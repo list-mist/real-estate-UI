@@ -13,7 +13,7 @@ export type property = {
     propertAddress? : string,
     propertyPrice? : Number,
     propertyOwner? : string,
-    propertyImage? : ImageData
+    propertyImage? : string
 }
 
 export enum propertyCategories {

@@ -17,10 +17,19 @@ const StyledDiv = styled.div`
     background-image: url(${img});
     background-size: cover;
 `
-const StyledForm = styled.form`
-  background-color: rgba(255,255,255,0.33) ;
-  box-shadow: 0px 8px 32px 0 rgba(0,0,255,0.33);
-`
+
+const StyledForm = styled(Form)`
+  background-color: rgba(255, 255, 255, 0.33);
+  box-shadow: 10px 10px 62px 0 rgba(90, 100, 255, 0.33);
+  backdrop-filter: blur(5px);
+  width: fit-content;
+  height: fit-content;
+  height: 55%;
+  width: 100%;
+  border-radius: 16px;
+  padding-top: 30px;
+  padding-right: 100px;
+`;
 
 export type FieldType = {
     username : String,
@@ -34,7 +43,8 @@ const LoginAndSignUp : React.FC = () =>{
   
   
    
-   const[form,] = useForm();
+   const [form] = Form.useForm(); // Changed to Form.useForm()
+
    const [login, setLogin] = useState<Boolean>(false)
    
    const onFinish = () =>{
@@ -44,7 +54,7 @@ const LoginAndSignUp : React.FC = () =>{
 
    return <>
   <StyledDiv style={{backgroundImage:"./images/image1.jpg"}}>
-   <Form className="form" 
+   <StyledForm 
     name="basic"
     form={form}
     labelCol={{ span: 8 }}
@@ -104,13 +114,13 @@ const LoginAndSignUp : React.FC = () =>{
       <Button type="primary" htmlType="submit">
         {login ? "Login" : "Sign Up"}
       </Button>
-      <Divider style={{borderColor:"black"}}>or Login with</Divider>
+      <Divider style={{borderColor:"black"}}>{login ? "Login" : "Sign Up"}</Divider>
       <div className="icons">
         <GoogleOutlined className="google" />
         <MailOutlined className="google"/>
       </div>
     </Form.Item>
-  </Form>
+  </StyledForm>
   </StyledDiv>
    </>
 }

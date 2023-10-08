@@ -11,9 +11,7 @@ const LandingPage = () => {
     
 
     return <>
-    <StyledDiv>
-     <h1>Hello</h1>
-     </StyledDiv>
+     <Header/>
     </>
 }
 
