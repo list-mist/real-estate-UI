@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import gsap from 'gsap';
 
 interface SlideProps {
-    transform: number; // Define the custom prop 'transform'
+    transform: number; 
   }
   interface InnerProps {
-    backgroundColor: string; // Define the custom prop 'backgroundColor'
+    backgroundColor: string; 
   }
   
   const Inner = styled.div<InnerProps>`
@@ -42,7 +42,7 @@ interface SlideProps {
     display: flex;
     width: 500%;
     transition: all 0.25s ease-in;
-    transform: translateX(-${(props) => props.transform}%); // Now 'transform' is recognized as a custom prop
+    transform: translateX(-${(props) => props.transform}%); 
   `;
 
 const SliderContainer = styled.div`
