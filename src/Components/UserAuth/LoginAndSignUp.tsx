@@ -107,7 +107,7 @@ const LoginAndSignUp : React.FC = () =>{
           }
         }}>
         
-        {login ? "Register here": "Already have an account"}
+        {login ? "Don't have an account ? Register here": "Already have an account"}
         </Button>
     </Form.Item>
     <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
@@ -116,7 +116,7 @@ const LoginAndSignUp : React.FC = () =>{
       </Button>
       <Divider style={{borderColor:"black"}}>{login ? "Login" : "Sign Up"}</Divider>
       <div className="icons">
-        <GoogleOutlined className="google" />
+        <GoogleOutlined className="google" onClick={() => { console.log("Login cutu") }}/>
         <MailOutlined className="google"/>
       </div>
     </Form.Item>
